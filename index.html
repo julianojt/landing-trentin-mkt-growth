@@ -74,6 +74,7 @@
 }
 </script>
 
+<link rel="icon" type="image/svg+xml" href="/icon-jt.svg">
 <link rel="icon" type="image/x-icon" href="/favicon.ico">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png">
@@ -131,7 +132,7 @@
   .intro .who .r a{color:var(--accent)}
   .hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:56px;align-items:center}
   @media(max-width:900px){.hero-grid{grid-template-columns:1fr;gap:40px}}
-  .hero h1{font-size:clamp(40px,5.6vw,62px);margin:20px 0 0}
+  .hero h1{font-size:clamp(40px,5.6vw,62px);margin:20px 0 0;text-wrap:balance}
   .hero .lede{font-size:clamp(18px,2.1vw,21px);color:var(--ink-2);max-width:34ch;margin-top:22px;line-height:1.5}
   .hero-note{font-family:var(--mono);font-size:12.5px;color:var(--muted);margin-top:26px;
     padding-left:14px;border-left:2px solid var(--accent);line-height:1.7}
@@ -365,7 +366,16 @@
   .cx-legend .sw{width:16px;height:2px;border-radius:2px;display:inline-block}
   .cx-legend .sw.p{background:#6E7DFF}.cx-legend .sw.s{background:#8CE0D0}
   .cx-hint{display:none;text-align:center;font-family:var(--mono);font-size:12px;color:rgba(255,255,255,.5);margin-top:18px}
-  @media(hover:none),(pointer:coarse){.cx-hint{display:block}.cx-legend{display:none}}
+  @media(hover:none),(pointer:coarse){
+    .cx-hint{display:block;margin:0 0 8px}
+    .cx-legend{display:none}
+    .cx-sup{display:none}
+  }
+  @media(max-width:600px){
+    .cx-stage{max-width:none;width:calc(100% + 2 * var(--pad));margin-left:calc(-1 * var(--pad));margin-right:calc(-1 * var(--pad))}
+    .cx-pair{font-size:17px}
+    .cx-imp{font-size:13px}
+  }
   @media(max-width:520px){.cx-lab{font-size:13px}}
   @media(prefers-reduced-motion:reduce){.cx-node,.cx-lab,.cx-link,.cx-pair,.cx-imp,.cx-sup{transition:none}}
 
@@ -404,7 +414,7 @@
   <div class="wrap hero-grid">
     <div class="reveal in">
       <span class="eyebrow accent">Fractional Marketing &amp; Growth Leader</span>
-      <h1>A arquitetura que<br>conecta marketing,<br>growth e vendas.</h1>
+      <h1>A arquitetura que conecta marketing, growth e vendas.</h1>
       <p class="lede">Construo uma área integrada de marketing, growth, comercial, dados e produto, funcionando como um só sistema. O resultado é mais negócios, operação que escala e uma marca que o mercado deseja.</p>
       <p class="hero-note">A liderança sênior que sua empresa precisa, sem precisar de um head full-time.<br>Entro por tempo definido, construo a área e saio com o time rodando sozinho.</p>
       <div class="cta-row">
@@ -564,13 +574,13 @@
       <h2>Eu não escolho entre<br>criatividade ou estratégia.</h2>
       <p class="sub">Caórdico vem de <em>chaordic</em>, a união de chaos (caos) e order (ordem). É a palavra que resume meu perfil: trabalho no encontro entre a criatividade que gera o novo e a estratégia que faz acontecer. Cada competência criativa se liga a uma estratégica para gerar impacto.</p>
     </div>
+    <p class="cx-hint">Toque em um ponto do radar para ver as conexões.</p>
     <div class="cx-stage reveal" data-cx aria-hidden="true"></div>
     <div class="cx-bp">
       <div class="cx-pair" data-pair></div>
       <div class="cx-imp" data-imp></div>
       <div class="cx-sup" data-sup></div>
     </div>
-    <p class="cx-hint">Toque em um ponto do radar para ver as conexões.</p>
     <div class="cx-legend">
       <span class="li"><span class="sw p"></span> Conexões principais</span>
       <span class="li"><span class="sw s"></span> Conexões de apoio</span>
